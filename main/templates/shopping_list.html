@@ -4,16 +4,31 @@
 </head>
 <body>
 	<form method="GET">
-		<h2>Add a food</h2>
-		<input type="text" name="food" value="" placeholder="What to buy?">
-		<input type="submit">
+		<h2>Enter Your Name</h2>
+		<input type="text" name="name" value="" placeholder="name">
+		<input type="submit" name="see result">
 	</form>
 	<br>
 	<br>
-	<h2> Shopping list</h2>
+	<h2> LOGIN <h2>
 	<ul>
+<!-- <h1>{{animal1}}</h1>
+<h3>{{animal2}}</h3> -->
 
+	</ul>
+	{% if name == 'jackfeniks' or name == 'orievg' %}
+		<h1>Здарова, {{name}}!</h1>
+	{% else %}
+		<h1>Ты не член группы</h1>
+		<h1>Ты {{name}}</h1>
+	{% endif %}		
+	<!-- items= [1,2,3,4,5 ... , 'asdasd'] -->
+	<ul>
+	{% for item in items %}
+	<li>{{item}}</li>
+	{%endfor%}
 	</ul>
 </body>
 </html>
 
+	
